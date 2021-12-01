@@ -1,4 +1,4 @@
-# 
+# 一些点云法向量估计的文章
 PCPNET :Learning Local Shape Properties from Raw Point Clouds（EG18）  
 提出基于局部面片的法向量估计方法，以PointNet作为网络结构，有单尺度和多尺度。  
 Nesti-Net: Normal Estimation for Unstructured 3D Point Clouds using Convolutional Neural Networks（cvpr19）  
