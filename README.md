@@ -19,5 +19,5 @@ Geometry and Learning Co-Supported Normal Estimation for Unstructured Point Clou
 将所有点分为候选点（接近尖锐特征）和平滑点（远离尖锐特征），平滑点的法线通过PCA简单地计算，对于接近尖锐特征的候选点，采用不同尺度的邻域进行平面拟合计算法向量，如此一个尺度对应多个不同的法向量。接着通过为每一个尺度的局部邻域构建高度图，将法线和高度图输入到深度网络(NH-Net)中对法线进行微调。  
 DNF-Net: a Deep Normal Filtering Network for Mesh Denoising（tvcg20）  
 网格上的法向量滤波方法，使用多尺度的特征嵌入和残差网络实现法向量去噪。  
-Deep Point Cloud Normal Estimation via Triplet Learning（cvpr2021）  
+Deep Point Cloud Normal Estimation via Triplet Learning 
 主干类似pcpnet，分为两个网络，面片特征提取网络和回归器。为点构造三元组（普通面片，正面片，负面片）。通过三元组损失指导编码网络提取到的普通面片的特征接近正面片远离负面片。提取到的特征输入回归器回归法向量。
