@@ -20,4 +20,9 @@ Geometry and Learning Co-Supported Normal Estimation for Unstructured Point Clou
 DNF-Net: a Deep Normal Filtering Network for Mesh Denoising（tvcg20）  
 网格上的法向量滤波方法，使用多尺度的特征嵌入和残差网络实现法向量去噪。  
 Deep Point Cloud Normal Estimation via Triplet Learning  
-主干类似pcpnet，分为两个网络，面片特征提取网络和回归器。为点构造三元组（普通面片，正面片，负面片）。通过三元组损失指导编码网络提取到的普通面片的特征接近正面片远离负面片。提取到的特征输入回归器回归法向量。
+主干类似pcpnet，分为两个网络，面片特征提取网络和回归器。为点构造三元组（普通面片，正面片，负面片）。通过三元组损失指导编码网络提取到的普通面片的特征接近正面片远离负面片。提取到的特征输入回归器回归法向量。  
+RePCD-Net: Feature-Aware Recurrent Point Cloud Denoising Network(ijcv22)  
+Multi-scale Neighbor Sampling：选取面片中心点，确定K个不同尺度的面片。进行中心化（坐标减去中心点坐标）和单位化（坐标除以球体半径）。
+Multi-scale Feature Extraction：PointNet+Feature Propagation，提取当前阶段的特征，使用RNN和注意力机制融合之前阶段的特征，用于特征回复。
+Bi-Directional RNN (BRNN) Based Feature Fusion：使用从大到小和从小到大两个尺度的面片输入到LSTM来进行不同尺度特征的融合。
+
